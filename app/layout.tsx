@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-full px-5 w-4/5 mx-auto">
-        <header className="p-5 h-18 border-2 border-black">
+      <body className="h-full max-w-4xl mx-auto">
+        <header className="p-5 h-18">
           <nav>
             <Link
               href="/"
@@ -30,7 +30,7 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        <main>{children}</main>
+        <main className="p-5 flex flex-col text-center">{children}</main>
         <footer></footer>
       </body>
     </html>
