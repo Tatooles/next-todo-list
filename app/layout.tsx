@@ -30,7 +30,7 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        <main className="p-5 flex flex-col text-center">{children}</main>
+        <main className="p-5 flex flex-col items-center">{children}</main>
         <footer></footer>
       </body>
     </html>
