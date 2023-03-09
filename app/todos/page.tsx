@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CreateTodo from "./CreateTodo";
+import DeleteTodo from "./DeleteTodo";
 
 async function getTodos() {
   const res = await fetch(
@@ -36,12 +37,12 @@ function Todo({ todo }: any) {
 
   // Could add a link
   return (
-    <Link href="/">
-      <div className="mb-4 border-2 border-black flex justify-between p-2 items-center">
-        <h1>{title}</h1>
-        <p>{created}</p>
-        <button className="bg-red-500 p-1 rounded-md">Delete</button>
-      </div>
-    </Link>
+    // <Link href="/">
+    <div className="mb-4 border-2 border-black flex justify-between p-2 items-center">
+      <h1>{title}</h1>
+      <p>{created}</p>
+      <DeleteTodo id={id} />
+    </div>
+    // </Link>
   );
 }

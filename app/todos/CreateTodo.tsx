@@ -1,6 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 export default function CreateTodo() {
+  const router = useRouter();
+
   const create = async () => {
     console.log("create new todo");
 
@@ -14,6 +17,8 @@ export default function CreateTodo() {
         description: "default decription",
       }),
     });
+
+    router.refresh();
   };
 
   return <button onClick={create}>Add Todo</button>;
