@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CreateTodo from "./CreateTodo";
 
 async function getTodos() {
   const res = await fetch(
@@ -9,16 +10,23 @@ async function getTodos() {
   return data?.items as any[];
 }
 
+async function addTodo() {
+  console.log("adding todo");
+}
+
 export default async function TodoPage() {
   const todos = await getTodos();
 
   return (
     <div className="w-full">
       <h1 className="text-3xl mb-4">Here are your todos!</h1>
-      {todos?.map((todo) => {
-        // return <div key={todo.id}>{todo.title}</div>;
-        return <Todo key={todo.id} todo={todo} />;
-      })}
+      <div>
+        {todos?.map((todo) => {
+          // return <div key={todo.id}>{todo.title}</div>;
+          return <Todo key={todo.id} todo={todo} />;
+        })}
+      </div>
+      <CreateTodo></CreateTodo>
     </div>
   );
 }
