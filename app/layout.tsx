@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-full max-w-4xl mx-auto">
+      <body className="h-screen max-w-4xl mx-auto bg-[#f7f9fc] flex flex-col">
         <header className="p-5 h-18">
           <nav>
             <Link
@@ -30,8 +30,8 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        <main className="p-5 flex flex-col items-center">{children}</main>
-        <footer></footer>
+        <main className="p-5 grow">{children}</main>
+        <footer className="text-center">Created by Kevin Tatooles</footer>
       </body>
     </html>
   );
