@@ -37,12 +37,12 @@ function Todo({ todo }: any) {
 
   // Could add a link
   return (
-    // <Link href="/">
-    <div className="mb-4 border-2 border-black flex justify-between p-2 items-center">
-      <h1>{title}</h1>
-      <p>{created}</p>
-      <DeleteTodo id={id} />
-    </div>
-    // </Link>
+    <Link href={`/todos/${id}`}>
+      <div className="mb-4 border-2 border-black flex justify-between p-2 items-center">
+        <h1>{title}</h1>
+        <p>{created}</p>
+        <DeleteTodo id={id} />
+      </div>
+    </Link>
   );
 }
