@@ -19,7 +19,7 @@ export default async function TodoPage() {
   const todos = await getTodos();
 
   return (
-    <div className="w-full">
+    <div className="w-full text-center">
       <h1 className="text-3xl mb-4">Here are your todos!</h1>
       <div>
         {todos?.map((todo) => {
@@ -38,9 +38,10 @@ function Todo({ todo }: any) {
   // Could add a link
   return (
     <Link href={`/todos/${id}`}>
-      <div className="mb-4 border-2 border-black flex justify-between p-2 items-center">
-        <h1>{title}</h1>
-        <p>{created}</p>
+      <div className="mb-4 border-2 max-w-sm mx-auto rounded-md border-black flex justify-between p-2 items-center">
+        <h1 className=" overflow-ellipsis overflow-hidden whitespace-nowrap">
+          {title}
+        </h1>
         <DeleteTodo id={id} />
       </div>
     </Link>

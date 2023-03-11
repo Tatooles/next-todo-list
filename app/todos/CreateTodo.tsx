@@ -27,7 +27,7 @@ export default function CreateTodo() {
   return (
     <form
       onSubmit={create}
-      className="flex flex-col border-2 border-black p-4 w-min rounded-md"
+      className="flex flex-col w-min mx-auto border-2 border-black p-4 rounded-md"
     >
       <input
         type="text"
