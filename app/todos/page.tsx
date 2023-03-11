@@ -11,10 +11,6 @@ async function getTodos() {
   return data?.items as any[];
 }
 
-async function addTodo() {
-  console.log("adding todo");
-}
-
 export default async function TodoPage() {
   const todos = await getTodos();
 

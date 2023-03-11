@@ -1,12 +1,10 @@
 import Link from "next/link";
 
 async function getTodo(id: string) {
-  console.log("fetching todo");
   const res = await fetch(
     `http://127.0.0.1:8090/api/collections/todos/records/${id}`
   );
   const data = await res.json();
-  console.log(data);
   return data;
 }
 

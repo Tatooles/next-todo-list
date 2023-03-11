@@ -5,7 +5,6 @@ export default function DeleteTodo({ id }: any) {
   const router = useRouter();
 
   const deleteTodo = async () => {
-    console.log("delete todo");
     await fetch(`http://127.0.0.1:8090/api/collections/todos/records/${id}`, {
       method: "DELETE",
     });
