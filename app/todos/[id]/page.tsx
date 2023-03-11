@@ -16,7 +16,8 @@ export default async function TodoPage({ params }: any) {
   return (
     <div className="w-full">
       <h1 className="text-3xl mb-4">{todo.title}</h1>
-      <p>{todo.description}</p>
+      <p className="mb-5">{todo.description}</p>
+      <p>Created: {todo.created.split(" ")[0]}</p>
     </div>
   );
 }
